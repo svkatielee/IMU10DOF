@@ -1,7 +1,7 @@
-IMU_DFRobot10dof
-================
+10dof_IMU
+=========
 
-mbed lib and example for 10dofimu from DFRobot.com
+mbed lib and example for 10dof MEMS IMU from DFRobot.com
 
 I started with the code from Aloïs Wolff's HK10DOF on mbed.com
 URL=http://developer.mbed.org/users/pommzorz/code/HK10DOF/
