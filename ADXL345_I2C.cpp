@@ -56,7 +56,7 @@
 ADXL345_I2C::ADXL345_I2C(PinName sda, PinName scl) : i2c_(sda, scl) {
 
     //400kHz, allowing us to use the fastest data rates.
-    i2c_.frequency(400000); //400000  
+    i2c_.frequency(100000); //400000  
 // initialize the BW data rate
     char tx[2];
     tx[0] = ADXL345_BW_RATE_REG;
