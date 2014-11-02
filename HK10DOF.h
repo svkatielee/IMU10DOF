@@ -74,7 +74,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  #include "ADXL345_I2C.h"
  #include "HMC5883L.h"
  #include "BMP085.h"
- #include "L3G4200D.h"
+// #include "L3G4200D.h"
+ #include "ITG3200.h"
  
   // default I2C 7-bit addresses of the sensors
   #define FIMU_ACC_ADDR ADXL345_ADDR_ALT_LOW // SDO connected to GND
@@ -130,8 +131,9 @@ class HK10DOF
       ADXL345_I2C acc;
       HMC5883L magn;
       BMP085 baro;
-      L3G4200D gyro;
-      Serial pc;    
+      //L3G4200D gyro;
+      ITG3200 gyro;
+      Serial pc;
       
 
     

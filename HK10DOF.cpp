@@ -39,7 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 HK10DOF::HK10DOF(PinName sda, PinName scl) : acc(sda,scl), magn(sda,scl),gyro(sda,scl), baro(sda,scl),pc(USBTX,USBRX)
 {
 
-    pc.baud(921600);
+    pc.baud(115200);
     
     // initialize quaternion
     q0 = 1.0f;
@@ -100,6 +100,7 @@ void HK10DOF::init(bool fastmode)
      wait_ms(10);
      acc.setPowerControl(MeasurementMode);
      wait_ms(10);
+     gyro.init();
     pc.printf("Sensors OK!\n\r");
 
     update.start();
@@ -187,9 +188,9 @@ void HK10DOF::getValues(float * values)
     values[5] =  gyrval[2];
     
     magn.getXYZ(accval);
-    values[6]=accval[0];
-    values[7]=accval[1];
-    values[8]=accval[2];
+    values[6]=(float)accval[0];
+    values[7]=(float)accval[1];
+    values[8]=(float)accval[2];
 
 
 #warning Accelerometer calibration active: have you calibrated your device?
