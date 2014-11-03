@@ -152,7 +152,6 @@ void ADXL345_I2C::getOutput(int* readings){
     readings[2] = (int)buffer[5] << 8 | (int)buffer[4];
 
 }
-*/
 
 void ADXL345_I2C::getOutput(int16_t* x, int16_t* y, int16_t* z) {
   int16_t *readings;
@@ -164,7 +163,7 @@ void ADXL345_I2C::getOutput(int16_t* x, int16_t* y, int16_t* z) {
   *y = readings[1]; 
   *z = readings[2]; 
 }
-
+*/
 
 char ADXL345_I2C::getDeviceID() {  
     return SingleByteRead(ADXL345_DEVID_REG);
