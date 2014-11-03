@@ -2,6 +2,11 @@
 =========
 
 mbed lib and example for 10dof MEMS IMU from DFRobot.com for use on ST's NUCLEOF401RE.
+http://www.dfrobot.com/wiki/index.php/10_DOF_Sensor_%28SKU:SEN0140%29
+    Adxl345 accelerometer
+    ITG3200 gyro
+    HMC5883L Compass
+    BMP085 pressure sensor
 
 I started with the code from Aloïs Wolff's HK10DOF on mbed.com
 URL=http://developer.mbed.org/users/pommzorz/code/HK10DOF/
