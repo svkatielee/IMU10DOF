@@ -2,11 +2,11 @@
 #include "mbed.h"
 //#include "math.h"
 
-#include "HMC5883L.h"
-#include "ADXL345_I2C.h"
-#include "L3G4200D.h"
-#include "BMP085.h"
-#include "HK10DOF.h"
+//#include "HMC5883L.h"
+//#include "ADXL345_I2C.h"
+//#include "L3G4200D.h"
+//#include "BMP085.h"
+#include "10DOF_IMU.h"
 
 //#include "PwmIn.h"
 
@@ -15,7 +15,7 @@ PwmOut rled(LED_RED);
 PwmOut gled(LED_GREEN);
 PwmOut bled(LED_BLUE);
  */
-HK10DOF imu(PB_9, PB_8);
+10DOF_IMU imu(PB_9, PB_8);
 float ypr[3];
 float values[9];
 double head;

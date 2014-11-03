@@ -11,14 +11,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-PROJECT         := NucIMU_HK10dof
+PROJECT         := 10DOF_IMU
 DEVICES         := NUCLEO_F401RE
 GCC4MBED_DIR    := ../..
 
 #NO_FLOAT_SCANF  := 0
 #NO_FLOAT_PRINTF := 0
 
-OBJECTS = ./main.o ./ADXL345_I2C.o ./HMC5883L.o ./TextLCD/TextLCD.o ./ITG3200.o ./BMP085.o ./HK10DOF.o 
+OBJECTS = ./main.o ./ADXL345_I2C.o ./HMC5883L.o ./TextLCD/TextLCD.o ./ITG3200.o ./BMP085.o ./10DOF_IMU.o 
 
 INCLUDE_PATHS = -I. -I./TextLCD -I./mbed -I./mbed/TARGET_NUCLEO_F401RE -I./mbed/TARGET_NUCLEO_F401RE/TARGET_STM -I./mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE 
 
