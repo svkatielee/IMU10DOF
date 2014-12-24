@@ -124,9 +124,10 @@ void HMC5883L::getXYZ(int16_t output[3])
     cmd[0] = 0x03; // starting point for reading
     i2c_.write(I2C_ADDRESS, cmd, 1, true); // set the pointer to the start of x
     i2c_.read(I2C_ADDRESS, data, 6, false);
-    
-    for(int i = 0; i < 3; i++) // fill the output variables
-        output[i] = int16_t(((unsigned char)data[i*2] << 8) | (unsigned char)data[i*2+1]);
+     // The 5883L data is X, Z Y so these are out of order!!
+    output[0] = int16_t(((unsigned char)data[0] << 8) | (unsigned char)data[1]); // X
+    output[2] = int16_t(((unsigned char)data[2] << 8) | (unsigned char)data[3]); // Z
+    output[1] = int16_t(((unsigned char)data[4] << 8) | (unsigned char)data[5]); // Y
 }
 
 double HMC5883L::getHeadingXY()
